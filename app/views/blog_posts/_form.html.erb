@@ -11,18 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.text_field :title, placeholder: "Title", class: "form-control" %>
   </div>
   <div class="field">
     <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
-  <div class="field">
-    <%= f.label :blog_entry %><br>
-    <%= f.text_area :blog_entry %>
+  <div class="form-group">
+    <%= f.text_area :blog_entry, placeholder: "Tell us about what you're feeling", class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-info" %>
   </div>
 <% end %>
